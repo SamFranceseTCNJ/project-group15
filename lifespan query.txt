@@ -1,0 +1,8 @@
+SELECT CAST(alpha_value as integer) as vigor, ROUND(AVG(EXTRACT('Day' FROM Lifespan)), 3) as Lifespan
+FROM Trait JOIN Lifespan
+ON Trait.goat_id=Lifespan.goat_id
+WHERE trait_code=(
+	SELECT picklistvalue_id FROM Picklist WHERE value='Vigor Score'
+) AND NOT alpha_value::integer = -1
+GROUP BY vigor
+ORDER BY vigor;

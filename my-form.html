@@ -1,0 +1,68 @@
+<!--/templates/my-form.html-->
+
+<html>
+    <head>
+        <title>Group 15 UI</title>
+    </head>
+    <body>
+	    <h3>A Look Into The Goat Database</h3>
+
+	    <h4>Question 1 - Does Vigor score correlate with traits?</h4>
+        <form action="/query-1" method="POST">
+            <div>
+                Trait:
+                <select name="select" class="Input">
+					<option>average adg</option>
+					<option>lifespan</option>
+				</select>
+            </div>
+                <input type="submit" value="Submit">
+        </form>
+
+	    <h4>Question 2 - comparing birthweights for each year</h4>
+        <form action="/year-input" method="POST">
+            <div>
+		        Enter any two years between 2012 and 2023
+                <br />
+		        year 1: <input type="text" name="query1">
+				<br />
+				year 2: <input type="text" name="query2">
+            </div>
+                <input type="submit" value="Submit">
+			<br />
+
+			<br />
+		</form>
+		<form action="/all-years" method="POST">
+			<div>
+				OR compare all years
+				<input type="submit" value="ALL YEARS">
+			</div>
+		</form>
+		<form action = "/gender-input" method ="POST"> 
+		<div>
+			Gender:
+			<select name="select" class="Input">
+				<option>Male avg birth weight</option>
+				<option>Female avg birth weight</option>
+			</select>
+		</div>
+			<input type="submit" value="Submit">
+        	
+        </form>
+    </body>
+
+    <!-- minimal styling -->
+    <style>
+        form {
+            margin: 1%;
+        }
+
+        div {
+            margin: 1% 0;
+        }
+		body {
+			background-color: rgb(173, 216, 230);
+		}
+    </style>
+</html>

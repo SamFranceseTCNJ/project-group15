@@ -1,0 +1,12 @@
+--Just their birthweights
+SELECT *
+FROM GoatBW;
+
+--Male birthweights
+SELECT * 
+FROM MaleBW; 
+
+--Female birthweights
+SELECT * 
+FROM FemaleBW; 
+
